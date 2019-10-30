@@ -1,1 +1,271 @@
 
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mid 2</title>
+	<style type="text/css">
+.line{
+display:flex;
+justify-content: space-between;
+width: 500px;
+}
+.col-1{
+width: 200px;
+border: 1px solid #dcdcdc;
+margin-left: 10px;
+align-items: center;
+justify-content: center;
+}
+#container{
+	display: grid;
+	grid-template-columns: auto auto auto;
+	margin-top: 20px;
+}
+#cart{
+	display: grid;
+	grid-template-columns: auto auto auto;
+	margin-top: 20px;
+}
+img{
+	width: 150px;
+	height: 150px;
+}
+button{
+	border: 1px solid red;
+	background-color: red;
+}
+	</style>
+</head>
+<body>
+	<div id="container"></div>
+	<hr>
+	<h1>Cart</h1>
+	<div id="cart"></div>
+	<hr>
+	<div>
+		<button onclick="tong()">Sum</button>
+		<button onclick="highest()">Highest</button>
+		<button onclick="lowest()">Lowest</button>
+		<button onclick="clean()">Clean</button>
+		<p id="kq"></p>
+		<p id="kq1"></p>
+		<p id="kq2"></p>
+	</div>
+	<script type="text/javascript">
+	var arr = [
+		{
+			image:"4.jpg",
+			name: 'Apple Iphone 7 256 Gb Matte Black',
+			xuatxu: 'Trung Quốc',
+			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
+			price: "19500000đ"
+			
+		},
+
+		{
+			image:"5.jpg",
+			name: 'Apple Iphone 7 256 Gb Matte Black',
+			xuatxu: 'Trung Quốc',
+			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
+			price: "19500000đ"
+			
+		},
+		{
+			image:"6.jpg",
+			name: 'Apple Iphone 7 256 Gb Matte Black',
+			xuatxu: 'Trung Quốc',
+			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
+			price: "19500000đ"
+			
+		},
+
+		{
+			image:"7.jpg",
+			name: 'Apple Iphone 7 256 Gb Matte Black',
+			xuatxu: 'Trung Quốc',
+			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
+			price: "19500000đ"
+		},
+
+		{
+			image:"8.jpg",
+			name: 'Apple Iphone 7 256 Gb Matte Black',
+			xuatxu: 'Trung Quốc',
+			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
+			price: "19500000đ"
+			
+		},
+		{
+			image:"9.jpg",
+			name: 'Apple Iphone 7 256 Gb Matte Black',
+			xuatxu: 'Trung Quốc',
+			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
+			price: "19500000đ"
+			
+		}
+	]
+	console.log(arr);
+	var carts = [];
+	
+		for(var i = 0; i<arr.length;i++){
+		var name1 = document.createElement("p");
+		var price1 = document.createElement("p");
+		var image1 = document.createElement("img");
+		var xuatxu1 = document.createElement("p");
+		var ghichu1=document.createElement("p");
+		var butAdd = document.createElement("button");
+		var line = document.createElement("div");
+
+		name1.innerText = arr[i].name;
+		price1.innerText = arr[i].price;
+		image1.src = arr[i].image;
+		ghichu1.innerText=arr[i].ghichu1;
+		xuatxu1.innerText= arr[i].xuatxu;
+		butAdd.innerText = "ADD";
+
+		line.className = "col-1";
+
+		butAdd.onclick = function(arg){
+			return function(){
+				var iname = arr[arg].name;
+			    var itontai = -1;
+				for(var k = 0; k<carts.length;k++){
+		    		if(carts[k].name == iname){
+		    			itontai = k;
+		    		}
+			    	}
+			    	if(itontai != -1){
+			    		carts[itontai].quantity += 1;
+			    	}else{
+			        carts.push({name: arr[arg].name,
+			        	price: arr[arg].price,
+			        	image: arr[arg].image,
+			        	quantity: 1
+			        });}
+				document.getElementById("cart").innerHTML = "";
+				displayCart();
+			}
+		}(i);
+
+		container.appendChild(line);
+		line.appendChild(image1);
+		line.appendChild(name1);
+		line.appendChild(xuatxu1);
+		line.appendChild(ghichu1);
+		line.appendChild(price1);
+		line.appendChild(butAdd);
+		
+	}
+
+	function displayCart(){
+		document.getElementById("cart").innerHTML = "";
+		for(var i = 0; i<carts.length; i++){
+			var cart = document.getElementById("cart");
+			var name2 = document.createElement("p");
+			var price2 = document.createElement("p");
+			var image2 = document.createElement("img");
+			var quantity2 = document.createElement("p");
+			var butDel = document.createElement("button");
+			var line = document.createElement("div");
+
+			name2.innerText = carts[i].name;
+			price2.innerText = carts[i].price;
+			image2.src = carts[i].image;
+			quantity2.innerText = "quantity: "+carts[i].quantity;
+			butDel.innerText = "Delete";
+
+			line.className = "col-1";
+
+			butDel.onclick=function(ar){
+					return function(){
+						console.log(carts[ar])
+						//delete students[ar];
+						carts.splice(ar,1);
+						console.log(carts)
+						displayCart();
+				 	}
+				 }(i);
+
+			cart.appendChild(line);
+			line.appendChild(image2);
+			line.appendChild(name2);
+			line.appendChild(price2);
+			line.appendChild(quantity2);
+			line.appendChild(butDel);
+		}
+	}
+
+	function tong(){
+		var tong = 0;
+			for(var i = 0 ; i<carts.length; i++){
+				tong+= parseInt(carts[i].price)* carts[i].quantity;
+			}
+		var vat = (tong / 100) * 10;
+		var total = tong + vat;
+	}
+	var a = 0;
+	function highest(){
+		if(a == 0){
+			for(var i = 0; i < carts.length- 1; i++){			
+				for(var j = i+1; j< carts.length ; j++){				
+					if(carts[i].price  < carts[j].price){
+						var tam ;
+						tam = carts[i];
+						carts[i] = carts[j];
+						carts[j] = tam;                                               					
+					}				
+				}
+			}
+			a -=1;
+		}else{
+			for(var i = 0; i < carts.length- 1; i++){			
+				for(var j = i+1; j< carts.length ; j++){				
+					if(carts[i].price  > carts[j].price){
+						var tam ;
+						tam = carts[i];
+						carts[i] = carts[j];
+						carts[j] = tam;                                               					
+					}				
+				}
+			}
+			a +=1;
+		}
+		
+		displayCart();
+	}
+	function lowest(){
+		if(a == 0){
+			for(var i = 0; i < carts.length- 1; i++){			
+				for(var j = i+1; j< carts.length ; j++){				
+					if(carts[i].price  > carts[j].price){
+						var tam ;
+						tam = carts[i];
+						carts[i] = carts[j];
+						carts[j] = tam;                                               					
+					}				
+				}
+			}
+			a -=1;
+		}else{
+			for(var i = 0; i < carts.length- 1; i++){			
+				for(var j = i+1; j< carts.length ; j++){				
+					if(carts[i].price  < carts[j].price){
+						var tam ;
+						tam = carts[i];
+						carts[i] = carts[j];
+						carts[j] = tam;                                               					
+					}				
+				}
+			}
+			a +=1;
+		}
+		displayCart();
+	}
+	function clean(){
+		carts.splice(0,carts.length);
+		displayCart();
+	}
+</script>
+</body>
+</html>
