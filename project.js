@@ -489,11 +489,11 @@ displayProduct();
 		random++;
 		}
 		
-	function searchHoa() {
+	/*function searchHoa() {
     var searchtext = document.getElementById("search").value;
     searchtext = searchtext.toLowerCase();
     search()(searchtext);
-	}
+	}*/
 
 	function search(){
 		var mangchuatimkiem = [];
@@ -564,8 +564,10 @@ displayProduct();
 
 
 	function onclickDatHang(){
+		alert("Bạn đã đặt hàng thành công");
+	}
 
-	}			
+			
 
 
 /*function add(cart){
