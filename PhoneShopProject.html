@@ -3,434 +3,111 @@
 <html>
 <head>
 	<title>SHOP PHONE</title>
-	<style type="text/css">
-	.display: {
-		display:flex;
-		justify-content: space-between;
-		width: 500px;
-	}
-	.borderMain{
-		border: 1px solid #dcdcdc;*/
-		padding: 5px;
-		margin-left: 25px;
-	}
-	.menu{
-			display: flex;
-			justify-content: space-between;
-		}
-	img{
-		height: 200px;
-		width: 150px;
-	}
-	button{
-		border-radius: 10px;
-			background: #333333;
-			justify-content: space-between;
-			color: white;
-			border: none;
-			padding: 10px;
-			outline: none;
-	}
-	.gia{
-		color: #ff0000;
-	}
-	
-
-	</style>
-	<script type="text/javascript">
-		var phone1={
-			image:"4.jpg",
-			name: 'Apple Iphone 7 256 Gb Matte Black',
-			xuatxu: 'Trung Quốc',
-			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
-			price: 19100000
-			
-		}
-
-		var phone2={
-			image:"5.jpg",
-			name: 'Apple Iphone 7 256 Gb Matte Black',
-			xuatxu: 'Trung Quốc',
-			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
-			price: 19200000
-			
-		}
-		var phone3={
-			image:"6.jpg",
-			name: 'Apple Iphone 7 256 Gb Matte Black',
-			xuatxu: 'Trung Quốc',
-			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
-			price: 19300000
-			
-		}
-
-		var phone4={
-			image:"7.jpg",
-			name: 'Apple Iphone 7 plus 256 Gb Matte Black',
-			xuatxu: 'Trung Quốc',
-			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
-			price: 19400000
-		}
-
-		var phone5={
-			image:"8.jpg",
-			name: 'Apple Iphone 7 256 Gb Matte Black',
-			xuatxu: 'Trung Quốc',
-			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
-			price:19500000
-			
-		}
-		var phone6={
-			image:"9.jpg",
-			name: 'Apple Iphone 7s 256 Gb Matte Black',
-			xuatxu: 'Trung Quốc',
-			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
-			price: 19600000
-			
-		}
-		var phone7={
-			image:"h1.jfif",
-			name: 'Apple Iphone 7 plus 256 Gb Matte Black',
-			xuatxu: 'Trung Quốc',
-			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
-			price: 19400000
-		}
-
-		var phone8={
-			image:"ip11.webp",
-			name: 'Apple Iphone 7 256 Gb Matte Black',
-			xuatxu: 'Trung Quốc',
-			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
-			price:19500000
-			
-		}
-		var phone9={
-			image:"ip11s.jpeg",
-			name: 'Apple Iphone 7s 256 Gb Matte Black',
-			xuatxu: 'Trung Quốc',
-			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
-			price: 19600000
-			
-		}
-		
-		var phone10={
-			image:"ipX.jpg",
-			name: 'Apple Iphone 7 plus 256 Gb Matte Black',
-			xuatxu: 'Trung Quốc',
-			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
-			price: 19400000
-		}
-
-		var phone11={
-			image:"linus.png",
-			name: 'Apple Iphone 7 256 Gb Matte Black',
-			xuatxu: 'Trung Quốc',
-			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
-			price:19500000
-			
-		}
-		var phone12={
-			image:"mobi.png",
-			name: 'Apple Iphone 7s 256 Gb Matte Black',
-			xuatxu: 'Trung Quốc',
-			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
-			price: 19600000
-			
-		}
-		var phone13={
-			image:"ssgalaxy.jfif",
-			name: 'Apple Iphone 7 plus 256 Gb Matte Black',
-			xuatxu: 'Trung Quốc',
-			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
-			price: 19400000
-		}
-
-		var phone14={
-			image:"sss19.jpg",
-			name: 'Apple Iphone 7 256 Gb Matte Black',
-			xuatxu: 'Trung Quốc',
-			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
-			price:19500000
-			
-		}
-		var phone15={
-			image:"y6.png",
-			name: 'Apple Iphone 7s 256 Gb Matte Black',
-			xuatxu: 'Trung Quốc',
-			ghichu:"Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.",
-			price: 19600000
-			
-		}
-		var products = [phone1,phone2,phone3,phone4,phone5,phone6,phone7,phone8,phone9,phone10,phone11,phone12,phone13,phone14,phone15];
-		var cart = [];
-		var random = 0;
-</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="project.css">
 </head>
 <body>
 <div>
-		<h1 style="color: #fb0000;">SHOP PHONE</h1>
+	<h1 style="color: #fb0000;">SHOP PHONE</h1>
 	</div>
-<div class="menu">
-	<button onclick="displayItems()" id="btn-pros">Danh sách Sản phẩm</button>
+
+<div style="margin-top: 10px; margin-left: 700px; display: flex;padding-left: 5px;justify-content: space-between;color:#bf0000;">
+               <h3 onclick=" displayProduct()">TOÀN BỘ</h3>
+               <h3 onclick=" displayPhukien()">PHỤ KIỆN</h3>
+               <h3 onclick=" displayLienhe()">LIÊN HỆ</h3>
+              
+     </div>
+
+
+	<div class="menu">
+		<button onclick="displayItems()" id="btn-pros">Danh sách Sản phẩm</button>
+		<img class="cart"src="cart.jfif"onclick="displayCarts()"></button>
+	</div>
+
 	<div id="items">
-	<input id="search" type="text" placeholder="Nhập tên máy">
-	<button onclick="search()">Tìm</button>
-	</div>
-		<button onclick="displayCarts()" id="btn-carts">Giỏ hàng</button>
-	</div>
-<div>
-	<img id = "myImage" src = "p1.jpg"style="width: 100%;height: 500px">
-	</div> 
-
-	 <script type="text/javascript">
-		var cars = [ "p4.jpg","p5.jpg","p6.jpg","p7.jpg","p8.jpg","p9.jpg"];
-		var position = 0;
-		setInterval(function(){
-			position = position +1;
-			document.getElementById("myImage").src = cars[ position];
-			if(position==5){
-				position = 0;
-			}
-},1000);
-	</script> 
-
-	
-
-	
-
-	<div id="container" >
 		
-	
-	</div>
+          <div style="margin-top: 10px; margin-left:20px;">
+          	<input id="search" type="text" placeholder="Nhập tên máy">
+			<button onclick="search()">Tìm</button>
+         </div>
 
-<div id="carts" style="display: none">
+
+	<div>
+	<img id = "myImage" src = "p1.jpg"style="width: 100%;height: 500px">
+	</div>  
+<hr>
+
+	<div>
+	<!-- <h1 style="color: #fb0000;">SẢN PHẨM NỔI BẬT_________________________</h1> -->
+	</div>
+	<div id="container" >
+	</div>
+	<div id="container-search" >
+	</div>
+	<hr>
+	<div id="display">
+</div>
+<button onclick="BanchayProducts()">BÁN CHẠY
+</button>
+</div>
+
+
+	<div id="cart" style="display: none">
 		<h1>Các sản phẩm đã thêm</h1>
 		<div id="containerCart"></div>
 		<button onclick="sort()" id="sort">Sắp xếp price</button>
-		<button onclick="clear()"id="clean">Clear</button>
+		<button onclick="clearr()"id="clean">Clear</button>
 		<button onclick="sumPrice()"id="sum">Tổng tiền</button>
+		<button onclick="Pay()">Thanh toán</button>
+		<div id="info">
+
+
 		<h3>Thành tiền</h3>
 		<div id="gia"></div>
 	</div>
 
-	<script type="text/javascript">
+		<div id= "thanhtoan"  style=" display: none;">
+		<div class="container-fluid">
+		<!-- <button onclick="backTinhTien()" style="float: left;">back </button> -->
+		<div class="row">
+		<div class="col-3">
+		<h3 class="btn">1</h3><h2> Nhập thông tin khách hàng:</h2>
+		<form name="frm">
+		<label> Nhập tên:</label>
+		<input type="text" class="form-control mb-3" name="hoten" id="hoten" placeholder="Họ và tên">
+		<label>Nhập SĐT:</label>
+		<input type="text" placeholder="Enter SĐT"name="SĐT" id="SĐT"/>
+		<label> Nhập email:</label>
+		<input type="text" class="form-control mb-3" name="email" id="email" placeholder="Email">
+		<label> Nhập địa chỉ:</label>
+		<input type="text" class="form-control mb-3" name="diachi" id="diachi" placeholder="Địa Chỉ">
 		
+		<textarea rows="4" class="form-control mb-3" cols="40" name="ghichu" placeholder="Ghi chú"></textarea>
+		</form>
+		</div>
+		<div class="col-5">
+		<h3 class="btn btn-danger">2</h3><h2> Chọn hình thức thanh toán:</h2>
+		<select  class="form-control" >
+		<option value="1">Thanh toán qua airpay </option>
+		<option value="2">Thanh toán qua thẻ ngân hàng </option>
+		<option value="3">Thanh toán khi nhận hàng  </option>
+		</select>
 	
+		<button class="btn btn-danger form-control mt-3" style=" width: 160px;height:40px;" onclick="onclickDatHang()">ĐẶT HÀNG</button>
+		
+	</div>
+</div>
+</div>
+</div>
+</div>
+<div id="containers">
+</div>
+
+<div id="text"></div>
+
+
 	
+<script src="project.js">
 </script>
-<script type="text/javascript">
-
-		 displayProduct();
-		function displayItems(){
-			document.getElementById("items").style.display = "block";
-			document.getElementById("carts").style.display = "none";
-			displayProduct();
-		}
-
-		function displayCarts(){
-			document.getElementById("items").style.display = "none";
-			document.getElementById("carts").style.display = "block";
-			displayCart()
-		}
-		
-		function displayProduct(){
-			for (var i = 0; i < products.length; i++) {
-
-				var container = document.getElementById('container');
-				var display=document.createElement("div");
-				var line = document.createElement("div");
-				display.appendChild(line);
-				var prName = document.createElement("b");
-				prName.innerText = products[i].name;
-				var prghichu=document.createElement("p");
-				prghichu.innerText=products[i].ghichu;
-				var prPrice = document.createElement("p");
-				prPrice.innerText = "Giá: "+products[i].price+ 'VND';;
-				prPrice.className="gia";
-				var prxuatxu = document.createElement("p");
-				prxuatxu.innerText = "Xuất xứ: " + products[i].xuatxu;
-				var prImage = document.createElement("img");
-				prImage.src= products[i].image;
-				var btAdd = document.createElement("button");
-				btAdd.innerText = "Đặt mua";
-
-				btAdd.onclick = function(arg){
-					return function(){
-						var iName = products[arg].name;
-						var exist = -1;
-						for (var j = 0; j < cart.length; j++) {
-							if(cart[j].name == iName){
-								exist = j;
-							}
-						}
-						if(exist != -1){
-							cart[exist].quantity += 1;
-						}
-						else {
-							cart.push({
-								pname: products[arg].name,
-								pprice: products[arg].price,
-								quantity: 1
-							})
-						}
-					displayCart();
-					}
-				}(i);
-				line.appendChild(prImage);
-				line.appendChild(prName);
-				line.appendChild(prxuatxu);
-				line.appendChild(prghichu);
-				line.appendChild(prPrice);
-				line.appendChild(btAdd);
-				container.appendChild(display);
-				display.className = "display";
-				display.className="borderMain";
-				
-			}
-		}
-		function displayCart(){
-			document.getElementById("containerCart").innerHTML = "";
-			for (var i = 0; i < cart.length;  i++) {
-				var containerCart = document.getElementById('containerCart');
-				var display=document.createElement("div");
-				var line = document.createElement("div");
-				display.appendChild(line);
-				line.className = "line";
-				var prName = document.createElement("p");
-				prName.innerText = cart[i].pname;
-				var prPrice = document.createElement("p");
-				prPrice.innerText = cart[i].pprice+ 'VND';;
-				prPrice.className="gia";
-				var quantity = document.createElement("p");
-				quantity.innerText = cart[i].quantity;
-				var btDelete = document.createElement("button");
-				btDelete.innerText = "Delete";
-				btDelete.onclick = function(ar){
-					return function(){
-						cart.splice(ar,1);
-						document.getElementById("containerCart").innerHTML = "";
-						displayCart();
-							}
-					}(i);
-				line.appendChild(prName);
-				line.appendChild(prPrice);
-				line.appendChild(quantity);
-				line.appendChild(btDelete);
-				containerCart.appendChild(display);
-			}
-		}
-		function sumPrice(){
-			console.log(cart[0].pprice);
-			var sum=0;
-			var ship=0;
-			var total=0;
-			for (var i =0; i < cart.length; i++) {
-			sum=sum+(cart[i].pprice*cart[i].quantity);
-			console.log(sum);
-			}
-			ship=(sum/100)*10;
-			total=sum+ship;
-
-			var boxprice=document.getElementById("gia");
-			var div=document.createElement("div");
-			var sprice=document.createElement("b");
-			var sship=document.createElement("b");
-			var stotal=document.createElement("b");
-
-			div.className="gia";
-			console.log(total);
-			sprice.innerText="Tổng số tiền:"+ sum + "VND\n";
-			
-			sship.innerText="Tiền ship:  "+ship+"VND\n";
-			stotal.innerText="total: "+total+"VND";
-			
-			div.append(sprice);
-			div.append(sship);
-			div.append(stotal);
-			boxprice.appendChild(div);
-		}
-
-		function clear(){
-			
-			cart=[];
-			document.getElementById("carts").innerHTML="";
-			displayCart();
-		}
-		function sort(){
-			var tam ;
-				for(var i = 0; i < cart.length- 1; i++){
-					for(var j = i+1; j< cart.length ; j++){
-						if(random % 2 == 0){
-							if(cart[i].pprice  < cart[j].pprice){
-								tam = cart[i];
-								cart[i] = cart[j];
-								cart[j] = tam;
-							}
-						}
-						else{
-							if(cart[i].pprice  > cart[j].pprice){
-								tam = cart[i];
-								cart[i] = cart[j];
-								cart[j] = tam;
-							}
-						}
-					}
-				}
-			displayCart();
-			random++;
-		}
-		function search(){
-			
-			
-				var containerCart = document.getElementById('containerCart');
-				var search = document.getElementById('search').value;
-				document.getElementById('search').value;
-				for (var i = 0; i < products.length;  i++) {
-					if(products[i].name === search){
-				var line = document.createElement("div");
-				container.appendChild(line);
-				line.className = "line";
-				var prName = document.createElement("p");
-				prName.innerText = products[i].name;
-				line.appendChild(prName);
-				var prPrice = document.createElement("p");
-				prPrice.innerText = products[i].price + 'VND';
-				prPrice.className="gia";
-				line.appendChild(prPrice);
-
-				var btAdd=document.createElement("button");
-				btAdd.innerText = "Đặt mua";
-				line.appendChild(btAddd);
-				btAdd.onclick = function(arg){
-					return function(){
-						var iName = products[arg].name;
-						var exist = -1;
-						for (var j = 0; j < products.length; j++) {
-							if(cart[j].name == iName){
-								exist = j;
-							}
-						}
-						if(exist != -1){
-							cart[exist].quantity += 1;
-						}
-						else {
-							cart.push({
-								pname: products[arg].name,
-								pprice: products[arg].price,
-								quantity: 1
-							})
-						}
-					console.log(cart);
-					displayCart();
-
-				}
-					}(i);
-				} else if (search === '') {
-					displayProduct();
-				}
-			}
-		}
-					
-	</script>
-</body>
+</body>		
 </html>
