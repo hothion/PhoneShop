@@ -2,54 +2,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SHOP PHONE</title>
+	<title>MOBLE PHONE</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="project.css">
 </head>
 <body>
-<div>
-	<h1 style="color: #fb0000;">SHOP PHONE</h1>
+	<div><h1 style="color: #fb0000;">SHOP PHONE</h1>
 	</div>
 
-<div style="margin-top: 10px; margin-left: 700px; display: flex;padding-left: 5px;justify-content: space-between;color:#bf0000;">
-               <h3 onclick=" displayProduct()">TOÀN BỘ</h3>
-               <h3 onclick=" displayPhukien()">PHỤ KIỆN</h3>
-               <h3 onclick=" displayLienhe()">LIÊN HỆ</h3>
-              
-     </div>
-
+	<div style="margin-top: 10px; margin-left: 700px; display: flex;padding-left: 5px;justify-content: space-between;color:#bf0000;">
+       <h3 onclick=" displayProduct()">TOÀN BỘ</h3>
+       <h3 onclick=" displayPhukien()">PHỤ KIỆN</h3>
+       <h3 onclick=" displayLienhe()">LIÊN HỆ</h3>
+	</div>
 
 	<div class="menu">
-		<button onclick="displayItems()" id="btn-pros">Danh sách Sản phẩm</button>
-		<img class="cart"src="cart.jfif"onclick="displayCarts()"></button>
+	<button onclick="displayItems()" id="btn-pros">Danh sách Sản phẩm
+	</button>
+	<img class="cart"src="cart.jfif"onclick="displayCarts()"></button>
 	</div>
 
 	<div id="items">
-		
-          <div style="margin-top: 10px; margin-left:20px;">
-          	<input id="search" type="text" placeholder="Nhập tên máy">
-			<button onclick="search()">Tìm</button>
-         </div>
+		<div style="margin-top: 10px; margin-left:20px;">
+		<input id="search" type="text" placeholder="Nhập tên máy">
+		<button onclick="search()">Tìm</button>
+		</div>
 
-
-	<div>
-	<img id = "myImage" src = "p1.jpg"style="width: 100%;height: 500px">
-	</div>  
-<hr>
-
-	<div>
-	<!-- <h1 style="color: #fb0000;">SẢN PHẨM NỔI BẬT_________________________</h1> -->
+		<div>
+		<img id = "myImage" src = "p1.jpg"style="width: 100%;height: 500px">
+		</div>  
+		<hr>
+		<div id="container" >
+		</div>
+		<div id="container-search" >
+		</div>
+		<hr>
+		<div id="display">
+		</div>
+		<button onclick="BanchayProducts()">BÁN CHẠY
+		</button>
 	</div>
-	<div id="container" >
-	</div>
-	<div id="container-search" >
-	</div>
-	<hr>
-	<div id="display">
-</div>
-<button onclick="BanchayProducts()">BÁN CHẠY
-</button>
-</div>
 
 
 	<div id="cart" style="display: none">
@@ -60,11 +52,9 @@
 		<button onclick="sumPrice()"id="sum">Tổng tiền</button>
 		<button onclick="Pay()">Thanh toán</button>
 		<div id="info">
-
-
 		<h3>Thành tiền</h3>
 		<div id="gia"></div>
-	</div>
+		</div>
 
 		<div id= "thanhtoan"  style=" display: none;">
 		<div class="container-fluid">
@@ -81,7 +71,7 @@
 		<input type="text" class="form-control mb-3" name="email" id="email" placeholder="Email">
 		<label> Nhập địa chỉ:</label>
 		<input type="text" class="form-control mb-3" name="diachi" id="diachi" placeholder="Địa Chỉ">
-		
+		<h3 style="color:red;">Ghi chú:
 		<textarea rows="4" class="form-control mb-3" cols="40" name="ghichu" placeholder="Ghi chú"></textarea>
 		</form>
 		</div>
@@ -92,21 +82,21 @@
 		<option value="2">Thanh toán qua thẻ ngân hàng </option>
 		<option value="3">Thanh toán khi nhận hàng  </option>
 		</select>
-	
-		<button class="btn btn-danger form-control mt-3" style=" width: 160px;height:40px;" onclick="onclickDatHang()">ĐẶT HÀNG</button>
 		
+		<button class="btn btn-danger form-control mt-3" style=" width: 160px;height:40px;" onclick="onclickDatHang()">ĐẶT HÀNG</button>
+		</div>
+
+		</div>
+		</div>
+		</div>
 	</div>
-</div>
-</div>
-</div>
-</div>
-<div id="containers">
-</div>
 
-<div id="text"></div>
+	<div id="containers">
+	</div>
 
+	<div id="text">
+	</div>
 
-	
 <script src="project.js">
 </script>
 </body>		
