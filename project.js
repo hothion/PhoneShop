@@ -242,6 +242,7 @@ displayProduct();
 		document.getElementById("display").innerHTML="";
 		document.getElementById("containerCart").innerHTML="";
 
+
 		for (var i = 0; i < phukien.length; i++) {
 
 			var containers = document.getElementById('containers');
@@ -299,7 +300,7 @@ displayProduct();
 	function displayLienhe(){
 		document.getElementById('container').innerHTML = "";
 		document.getElementById('containers').innerHTML = "";
-
+		document.getElementById("thanhtoan").innerHTML="";
 		for (var i = 0; i < phukien.length; i++) {
 			var text = document.getElementById('text');
 			var line = document.createElement("div");
@@ -313,7 +314,7 @@ displayProduct();
 			var prOffTime = document.createElement("p");
 			prOffTime.innerText =  lh[i].offTime;
 			var prSdt = document.createElement("i");
-			prSdt.innerText= lh[i].SĐT;
+			prSdt.innerText= "SĐT: "+lh[i].SĐT;
 			
 			line.appendChild(prText);
 			line.appendChild(prMuc);
@@ -332,6 +333,8 @@ displayProduct();
 		document.getElementById('container').innerHTML = "";
 		document.getElementById("display").innerHTML="";
 		document.getElementById("containerCart").innerHTML="";
+		
+
 
 
 		for (var i = 0; i<3; i++) {
@@ -564,22 +567,11 @@ displayProduct();
 
 
 	function onclickDatHang(){
-		alert("Bạn đã đặt hàng thành công");
+		alert("Bạn đã đặt hàng thành công!");
 	}
 
 			
 
-
-/*function add(cart){
-	var carts=JSON.parse(localStorage.getItem("cart"));
-	if(!carts){
-		carts={item};
-		localStorage.setItem("carts",JSON.stringify(cart));
-	}else{
-
-	}
-	}
-*/
 
 
 
